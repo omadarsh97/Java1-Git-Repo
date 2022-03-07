@@ -1,17 +1,18 @@
+package simplilearn.com.assesment;
 
-import java.io.*;
-import java.util.Scanner;
+import java.io.File;
 import java.io.IOException;
-public class lockedMe {
+import java.util.Scanner;
 
+public class LockedMe {
 	public static void main(String[] args)throws IOException, InterruptedException 
 	{
 		Scanner sc = new Scanner(System.in);
-		int choice,Fchoice,OPchoice,  fc=0,j, count=0;
+		int choice,Fchoice,OPchoice,  fc=0,count=0;
 		String st;
-		File mFolder =new File("C:\\Users\\Rajan Kumar\\Desktop\\JAVAMAIN");
+		File mFolder =new File("C:\\Users\\Adarsh Baghel\\Desktop\\JAVAMAIN");
 		mFolder.mkdir();
-		String location = "C:\\Users\\Rajan Kumar\\Desktop\\JAVAMAIN";
+		String location = "C:\\Users\\Adarsh Baghel\\Desktop\\JAVAMAIN";
 		
 		System.out.println("Welcome to Virtual Key for Repositories in JAVA\n\n");
 		System.out.println("Press Enter to continue...");
@@ -27,7 +28,7 @@ public class lockedMe {
 	    choice= sc.nextInt();
 	    switch(choice) {
 	    case 1:
-	    	File Fobj = new File("C:\\Users\\Rajan Kumar\\Desktop\\JAVAMAIN");
+	    	File Fobj = new File("C:\\Users\\Adarsh Baghel\\Desktop\\JAVAMAIN");
 			File Farray[] = Fobj.listFiles();
 	    	for(int i=0;i<Farray.length;i++) {
 	    		if(Farray[i].isFile()) {
@@ -129,7 +130,7 @@ public class lockedMe {
 		    case 3:
 		    	System.out.println("Please Enter Name of File/Folder:");
 		    	st = sc.next();
-		    	File fsearch = new File("C:\\Users\\Rajan Kumar\\Desktop\\JAVAMAIN");
+		    	File fsearch = new File("C:\\Users\\Adarsh Baghel\\Desktop\\JAVAMAIN");
 				File FSarray[] = fsearch.listFiles();
 		    	for(int i=0;i<FSarray.length;i++) {
 		    		if(FSarray[i].getName().startsWith(st)) {
@@ -171,5 +172,6 @@ public class lockedMe {
         sc.close();
         
 	}
+
 
 }
